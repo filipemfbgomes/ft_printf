@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fde-mour <fde-mour@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: figomes <figomes@student.42.fr>            #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/05 15:18:18 by fde-mour          #+#    #+#             */
-/*   Updated: 2023/05/09 16:50:26 by fde-mour         ###   ########.fr       */
+/*   Created: 2025-04-22 15:49:40 by figomes           #+#    #+#             */
+/*   Updated: 2025-04-22 15:49:40 by figomes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@ int	ft_putnbr_base(int nbr, char *base)
 	else
 		n = nbr;
 	if (n >= basesize)
-	{
 		count += ft_putnbr_base(n / basesize, base);
-	}
 	count += ft_putchar(base[n % basesize]);
 	return (count);
 }

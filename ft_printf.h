@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fde-mour <fde-mour@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: figomes <figomes@student.42.fr>            #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/05 16:35:54 by fde-mour          #+#    #+#             */
-/*   Updated: 2023/05/05 16:57:20 by fde-mour         ###   ########.fr       */
+/*   Created: 2025-04-24 15:49:58 by figomes           #+#    #+#             */
+/*   Updated: 2025-04-24 15:49:58 by figomes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "libft/libft.h"
 # include <stdarg.h>
+# include <stdio.h>
 
 int	ft_printf(const char *str, ...);
 

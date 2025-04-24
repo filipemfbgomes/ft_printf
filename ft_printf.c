@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fde-mour <fde-mour@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: figomes <figomes@student.42.fr>            #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 16:39:52 by fde-mour          #+#    #+#             */
-/*   Updated: 2023/05/09 19:14:15 by fde-mour         ###   ########.fr       */
+/*   Created: 2025-04-22 15:46:36 by figomes           #+#    #+#             */
+/*   Updated: 2025-04-22 15:46:36 by figomes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	ft_printf(const char *str, ...)
 	va_start(args, str);
 	count = 0;
 	if (str == 0)
-		return (0);
+		return (-1);
 	while (*str != '\0')
 	{
 		if (*str == '%')
@@ -54,13 +54,15 @@ int	ft_printf(const char *str, ...)
 		str++;
 	}
 	va_end(args);
+	if (count < 0)
+		return (-1);
 	return (count);
 }
 
-// int	main(void)
-// {
-// 	ft_printf("%c\n", 57);
-// 	printf("%c\n", 57);
-
-// 	return (0);
-// }
+/*int	main(void)
+{
+	//fclose(stdout);
+	fprintf(stderr, "%d\n", ft_printf("Boas trallalero trallala"));
+	fprintf(stderr, "%d\n", printf("Boas trallalero trallala"));
+	return (0);
+}*/
